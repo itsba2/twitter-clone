@@ -2,6 +2,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      width: {
+        600: '600px',
+      },
       colors: {
         primary: {
           base: 'rgb(29, 155, 240)',
