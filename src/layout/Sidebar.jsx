@@ -10,7 +10,6 @@ import {
   MoreIcon,
   NotificationsIcon,
   ProfileIcon,
-  DotDotDotIcon,
   TwitterIcon,
   HomeIconActive,
   ExploreIconActive,
@@ -87,7 +86,7 @@ const Sidebar = () => {
   };
   return (
     <div className="flex flex-col justify-between px-2 w-64">
-      <div className=" sticky top-0">
+      <div className="sticky top-0">
         <div className="mt-1 mb-2 flex items-center justify-center hover:bg-primary-light w-12 h-12 rounded-full transform transition-colors duration-100 cursor-pointer">
           <TwitterIcon iconDesign={'h-7 w-7 text-primary-base'} />
         </div>

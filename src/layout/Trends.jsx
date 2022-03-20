@@ -78,7 +78,7 @@ const footers = [
 
 const Trends = () => {
   return (
-    <aside className="w-80 ml-3">
+    <aside className="w-72 ml-3">
       <div className="sticky top-0 bg-secondary-white py-2 mb-3">
         <Search />
       </div>

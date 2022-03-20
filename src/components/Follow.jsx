@@ -9,11 +9,17 @@ const Follow = ({ photo, twitterName, username, isFollower }) => {
         alt=""
       />
       <div className="flex flex-col justify-start mr-auto">
-        <span className="font-bold text-sm">{twitterName}</span>
+        <span className="font-bold text-sm">
+          {twitterName.length >= 17
+            ? `${twitterName.slice(0, 14)}...`
+            : twitterName}
+        </span>
         <span className="text-sm text-secondary-darkGray">
-          @{username}
+          {username.length >= 8
+            ? `@${username.slice(0, 5)}...`
+            : `@${username}`}
           {isFollower ? (
-            <span className="bg-secondary-xLightGray rounded-sm p-1 ml-2 text-xs">
+            <span className="bg-secondary-xLightGray rounded-sm px-1 ml-1 text-xs">
               Follows you
             </span>
           ) : (
