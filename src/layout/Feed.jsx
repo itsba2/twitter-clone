@@ -8,7 +8,7 @@ import TweetInFeed from '../components/TweetInFeed';
 const Feed = () => {
   return (
     <main className="w-600 mx-3 border-x">
-      <div className="h-12 flex justify-between items-center px-3 sticky top-0 bg-secondary-white">
+      <div className="h-12 flex justify-between items-center px-3 sticky top-0 bg-secondary-white z-10">
         <div className="font-bold text-lg">Home</div>
         <div className="hover:bg-secondary-xxLightGray rounded-full flex justify-center items-center transform transition-colors duration-100 cursor-pointer p-2">
           <TopTweetsIcon iconDesign={'h-5 w-5 text-secondary-black'} />
@@ -28,7 +28,9 @@ const Feed = () => {
           attachedPhoto={tweet.attachedPhoto}
           replyCount={tweet.replyCount}
           retweetCount={tweet.retweetCount}
+          retweeted={tweet.retweeted}
           likeCount={tweet.likeCount}
+          liked={tweet.liked}
         />
       ))}
     </main>

@@ -8,7 +8,7 @@ const Search = () => {
       <input
         type="text"
         placeholder="Search Twitter"
-        className="placeholder-secondary-darkGray bg-transparent outline-none w-full focus:text-secondary-black"
+        className="placeholder-secondary-darkGray bg-transparent outline-none w-full focus:text-secondary-black z-10"
       />
     </div>
   );

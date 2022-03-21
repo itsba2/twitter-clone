@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   DotDotDotIcon,
+  LikedIcon,
   LikeIcon,
   ReplyIcon,
   RetweetIcon,
@@ -18,12 +19,14 @@ const TweetInFeed = ({
   attachedPhoto,
   replyCount,
   retweetCount,
+  retweeted,
   likeCount,
+  liked,
 }) => {
   return (
     <div className="flex border-b cursor-pointer hover:bg-secondary-xxLightGray">
       <div className="flex justify-center items-start px-2 py-3">
-        <img className="rounded-full hover:opacity-70" src={photo} alt="" />
+        <img className="rounded-full hover:opacity-70 " src={photo} alt="" />
       </div>
       <div className="py-3 pl-2 pr-4">
         <div className="flex justify-between">
@@ -63,18 +66,36 @@ const TweetInFeed = ({
             </div>
             <span className="text-sm ml-2">{replyCount}</span>
           </span>
-          <span className="flex items-center hover:text-secondary-darkGreen group">
-            <div className="group-hover:bg-secondary-lightGreen text-secondary-darkGray group-hover:text-secondary-darkGreen h-6 w-6 flex justify-center items-center rounded-full transform transition-colors duration-100 py-2">
-              <RetweetIcon iconDesign={'h-4 w-4'} />
-            </div>
-            <span className="text-sm ml-2">{retweetCount}</span>
-          </span>
-          <span className="flex items-center hover:text-secondary-darkRose group">
-            <div className="group-hover:bg-secondary-lightRose text-secondary-darkGray group-hover:text-secondary-darkRose h-6 w-6 flex justify-center items-center rounded-full transform transition-colors duration-100 py-2">
-              <LikeIcon iconDesign={'h-4 w-4'} />
-            </div>
-            <span className="text-sm ml-2">{likeCount}</span>
-          </span>
+          {retweeted ? (
+            <span className="flex items-center group text-secondary-darkGreen">
+              <div className="group-hover:bg-secondary-lightGreen  group-hover:text-secondary-darkGreen h-6 w-6 flex justify-center items-center rounded-full transform transition-colors duration-100 py-2">
+                <RetweetIcon iconDesign={'h-4 w-4'} />
+              </div>
+              <span className="text-sm ml-2">{retweetCount}</span>
+            </span>
+          ) : (
+            <span className="flex items-center hover:text-secondary-darkGreen group">
+              <div className="group-hover:bg-secondary-lightGreen text-secondary-darkGray group-hover:text-secondary-darkGreen h-6 w-6 flex justify-center items-center rounded-full transform transition-colors duration-100 py-2">
+                <RetweetIcon iconDesign={'h-4 w-4'} />
+              </div>
+              <span className="text-sm ml-2">{retweetCount}</span>
+            </span>
+          )}
+          {liked ? (
+            <span className="flex items-center text-secondary-darkRose group">
+              <div className="group-hover:bg-secondary-lightRose group-hover:text-secondary-darkRose h-6 w-6 flex justify-center items-center rounded-full transform transition-colors duration-100 py-2">
+                <LikedIcon iconDesign={'h-4 w-4'} />
+              </div>
+              <span className="text-sm ml-2">{likeCount}</span>
+            </span>
+          ) : (
+            <span className="flex items-center hover:text-secondary-darkRose group">
+              <div className="group-hover:bg-secondary-lightRose text-secondary-darkGray group-hover:text-secondary-darkRose h-6 w-6 flex justify-center items-center rounded-full transform transition-colors duration-100 py-2">
+                <LikeIcon iconDesign={'h-4 w-4'} />
+              </div>
+              <span className="text-sm ml-2">{likeCount}</span>
+            </span>
+          )}
           <span>
             <div className="hover:bg-primary-medium text-secondary-darkGray hover:text-primary-base h-6 w-6 flex justify-center items-center rounded-full transform transition-colors duration-100 py-2">
               <ShareIcon

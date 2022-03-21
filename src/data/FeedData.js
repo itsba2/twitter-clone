@@ -12,7 +12,9 @@ export const tweets = [
       'https://pbs.twimg.com/media/FOX9-eqWYAQfDBn?format=jpg&name=4096x4096',
     replyCount: '214',
     retweetCount: '2,225',
+    retweeted: true,
     likeCount: '31.3K',
+    liked: true,
   },
   {
     photo:
@@ -22,11 +24,13 @@ export const tweets = [
     isVerified: true,
     timeAgo: '20 Mar',
     content:
-      "We didn't think we'd be posting this tonight. But it's a PODIUM for @LewisHamilton!! 👊",
+      "We didn't think we'd be posting this tonight. But it's a PODIUM for @LewisHamilton !! 👊",
     attachedPhoto:
       'https://pbs.twimg.com/media/FOTp9IwXMAg6wqS?format=jpg&name=4096x4096',
     replyCount: '2,268',
     retweetCount: '15.7K',
+    retweeted: false,
     likeCount: '91.4K',
+    liked: true,
   },
 ];
