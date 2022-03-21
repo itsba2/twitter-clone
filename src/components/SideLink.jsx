@@ -1,4 +1,6 @@
 import React from 'react';
+import HomeBadge from './HomeBadge';
+import MessageBadge from './MessageBadge';
 
 export const SideLink = ({ name, Icon, active, onSideLinkClick }) => {
   const isActive = active === name;
@@ -13,6 +15,8 @@ export const SideLink = ({ name, Icon, active, onSideLinkClick }) => {
           `}
           >
             <Icon iconDesign={`h-7 w-7 text-secondary-black`} />
+            {name === 'Home' ? <HomeBadge /> : ''}
+            {name === 'Messages' ? <MessageBadge /> : ''}
             <span className="ml-4 text-lg">{name}</span>
           </div>
         </div>

@@ -1,6 +1,22 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
+    fontSize: {
+      '3xs': '.5rem',
+      '2xs': '.625rem',
+      xs: '.75rem',
+      sm: '.875rem',
+      tiny: '.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+      '7xl': '5rem',
+    },
     borderWidth: {
       DEFAULT: '1px',
       0: '0',
@@ -18,6 +34,7 @@ module.exports = {
         primary: {
           base: 'rgb(29, 155, 240)',
           dark: 'rgb(26, 140, 216)',
+          medium: 'rgb(225, 238, 246)',
           light: 'rgb(232, 245, 253)',
         },
         secondary: {
@@ -27,6 +44,10 @@ module.exports = {
           xLightGray: 'rgb(231, 231, 232)',
           xxLightGray: 'rgb(239, 243, 244)',
           white: 'rgb(255, 255, 255)',
+          darkGreen: 'rgb(0, 186, 124)',
+          lightGreen: 'rgb(222, 241, 235)',
+          darkRose: 'rgb(249, 24, 128)',
+          lightRose: 'rgb(247, 224, 235)',
         },
       },
     },

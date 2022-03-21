@@ -1,83 +1,9 @@
 import React, { useState } from 'react';
 import { SideLink } from '../components/SideLink';
 import SideUserBox from '../components/SideUserBox';
-import {
-  BookmarksIcon,
-  ExploreIcon,
-  HomeIcon,
-  ListsIcon,
-  MessagesIcon,
-  MoreIcon,
-  NotificationsIcon,
-  ProfileIcon,
-  TwitterIcon,
-  HomeIconActive,
-  ExploreIconActive,
-  NotificationsIconActive,
-  MessagesIconActive,
-  BookmarksIconActive,
-  ListsIconActive,
-  ProfileIconActive,
-} from '../icons/icons';
+import { TwitterIcon } from '../icons/icons';
 
-const sideLinks = [
-  {
-    name: 'Home',
-    icon: {
-      active: HomeIconActive,
-      passive: HomeIcon,
-    },
-  },
-  {
-    name: 'Explore',
-    icon: {
-      active: ExploreIconActive,
-      passive: ExploreIcon,
-    },
-  },
-  {
-    name: 'Notifications',
-    icon: {
-      active: NotificationsIconActive,
-      passive: NotificationsIcon,
-    },
-  },
-  {
-    name: 'Messages',
-    icon: {
-      active: MessagesIconActive,
-      passive: MessagesIcon,
-    },
-  },
-  {
-    name: 'Bookmarks',
-    icon: {
-      active: BookmarksIconActive,
-      passive: BookmarksIcon,
-    },
-  },
-  {
-    name: 'Lists',
-    icon: {
-      active: ListsIconActive,
-      passive: ListsIcon,
-    },
-  },
-  {
-    name: 'Profile',
-    icon: {
-      active: ProfileIconActive,
-      passive: ProfileIcon,
-    },
-  },
-  {
-    name: 'More',
-    icon: {
-      active: MoreIcon,
-      passive: MoreIcon,
-    },
-  },
-];
+import { sideLinks } from '../data/SidebarData';
 
 const Sidebar = () => {
   const [active, setActive] = useState('Home');
