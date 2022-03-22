@@ -25,10 +25,10 @@ const TweetInFeed = ({
 }) => {
   return (
     <div className="flex border-b cursor-pointer hover:bg-secondary-xxLightGray">
-      <div className="flex justify-center items-start px-2 py-3">
+      <div className="flex justify-center items-start px-2 py-3 w-20">
         <img className="rounded-full hover:opacity-70 " src={photo} alt="" />
       </div>
-      <div className="py-3 pl-2 pr-4">
+      <div className="py-3 pl-2 pr-4 w-full">
         <div className="flex justify-between">
           <div className="flex items-center text-sm">
             <span className="mx-0.5 font-bold hover:underline">
